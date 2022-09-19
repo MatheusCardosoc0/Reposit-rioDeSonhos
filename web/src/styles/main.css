@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  @apply bg-gradient-to-tr bg-gray-500 via-zinc-600 from-slate-600
+  bg-cover bg-no-repeat h-screen
+}
