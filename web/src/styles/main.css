@@ -6,3 +6,7 @@ body{
   @apply bg-gradient-to-tr bg-gray-500 via-zinc-600 from-slate-600
   bg-cover bg-no-repeat h-screen
 }
+
+form input{
+  @apply w-48 px-4 py-1 rounded-lg bg-zinc-700 text-zinc-200
+}
