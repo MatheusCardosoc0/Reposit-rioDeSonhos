@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div className="text-2xl">
-      <Layaut>
+      <Layaut most={buscador} func={setBuscador}>
       {busca?
       resultBusca.map(ad =>{
         return(
@@ -64,7 +64,6 @@ function App() {
         )
       })}
       </Layaut>
-      <input onChange={e => setBuscador(e.target.value)} value={buscador}></input>
     </div>
   )
 }
