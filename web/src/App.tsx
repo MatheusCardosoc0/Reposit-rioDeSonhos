@@ -1,9 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import { Ad, AdProps } from './components/Ad'
 import { Layaut } from './components/Layaut'
 import axios from 'axios'
-import * as Dialog from '@radix-ui/react-dialog';
 import { useAds } from './hooks/useAds'
 
 
@@ -48,7 +47,7 @@ function App() {
           <Ad key={ad.price}
           imageUrl={ad.imageUrl}
           description={ad.description}
-          price={ad.price}
+          price={ad.price.slice('', -2) + '.' + ad.price.slice(-2)}
           title={ad.title}
           />
         )
@@ -58,7 +57,7 @@ function App() {
           <Ad key={ad.price}
           imageUrl={ad.imageUrl}
           description={ad.description}
-          price={ad.price}
+          price={ad.price.slice('', -2) + '.' + ad.price.slice(-2)}
           title={ad.title}
           />
         )
