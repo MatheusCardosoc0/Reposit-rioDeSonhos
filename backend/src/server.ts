@@ -4,6 +4,7 @@ import cors from 'cors'
 
 const app = Express()
 const prisma = new PrismaClient()
+const port = process.env.PORT || 3444
 
 app.use(Express.json())
 
@@ -31,4 +32,6 @@ app.post("/ads", async (request, response) => {
   return response.status(201).json(ad)
 })
 
-app.listen(3444)
+app.listen(port, () =>{
+  console.log('servidor rodando')
+})
